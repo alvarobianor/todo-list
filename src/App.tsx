@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./App.module.css";
-import { FindBar } from "./FindBar";
-import { Header } from "./Header";
+import { FindBar } from "./components/FindBar";
+import { Header } from "./components/Header";
 
 function App() {
   return (
