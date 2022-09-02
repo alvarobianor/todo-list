@@ -12,7 +12,7 @@ function App() {
       <div className={styles.wrapper}>
         <FindBar />
         <Board />
-        <InfosEmptyList />
+        <InfosEmptyList></InfosEmptyList>
       </div>
     </main>
   );
