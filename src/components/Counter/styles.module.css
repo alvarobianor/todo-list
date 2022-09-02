@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.blue {
+  color: var(--blue-dark);
+}
+
+.purple {
+  color: var(--purple-dark);
+}
+
+.containerValue {
+  padding: 0.125rem 0.8rem;
+  background-color: var(--gray-400);
+  border-radius: 999px;
+}
+
+.containerValue > strong {
+  font-size: 0.75rem;
+}

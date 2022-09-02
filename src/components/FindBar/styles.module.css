@@ -1,13 +1,14 @@
 .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(19rem, 1fr) 5.95rem;
   gap: 0.5rem;
+  justify-content: space-between;
   width: 100%;
   height: 3.5rem;
 }
 
 .findBar {
   width: 100%;
-  max-width: 38.375rem;
   border: 1px solid var(--gray-700);
   border-radius: 8px;
   padding: 1rem;
@@ -18,6 +19,8 @@
 .submitButton {
   background: var(--blue);
   display: flex;
+  height: 100%;
+  position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -32,6 +35,7 @@
 
 .boxButton {
   display: flex;
+  /* min-width: 95.359px; */
   align-items: center;
   justify-content: center;
 }
@@ -43,6 +47,7 @@
 .submitButton:active {
   padding: 0.9rem;
   font-size: 0.9rem;
+  height: auto;
   transition: padding 0.1s, font-size 0.1s;
 }
 
