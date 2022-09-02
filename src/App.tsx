@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 
 function App() {
   return (
-    <main>
+    <main className={styles.main}>
       <Header />
       <div className={styles.wrapper}>
         <FindBar />

@@ -3,9 +3,11 @@ import styles from "./styles.module.css";
 
 export function Board() {
   return (
-    <nav className={styles.wrapper}>
-      <Counter title="Alvaro" color="purple" />
-      <Counter title="Alvaro" color="purple" />
-    </nav>
+    <div className={styles.wrapper}>
+      <section className={styles.section}>
+        <Counter title="Tarefas criadas" color="blue" />
+        <Counter title="Concluídas" color="purple" />
+      </section>
+    </div>
   );
 }
