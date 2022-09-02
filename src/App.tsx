@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 import { Board } from "./components/Board";
 import { FindBar } from "./components/FindBar";
 import { Header } from "./components/Header";
-import { InfosEmptyList } from "./components/InfosEmptyList";
+import { ContentInfos } from "./components/ContentInfos";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className={styles.wrapper}>
         <FindBar />
         <Board />
-        <InfosEmptyList></InfosEmptyList>
+        <ContentInfos></ContentInfos>
       </div>
     </main>
   );

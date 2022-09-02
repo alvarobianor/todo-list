@@ -5,7 +5,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export function InfosEmptyList({ children }: Props) {
+export function ContentInfos({ children }: Props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
