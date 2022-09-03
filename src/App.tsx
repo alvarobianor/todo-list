@@ -4,6 +4,7 @@ import { Board } from "./components/Board";
 import { FindBar } from "./components/FindBar";
 import { Header } from "./components/Header";
 import { ContentInfos } from "./components/ContentInfos";
+import { Task } from "./components/Task";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className={styles.wrapper}>
         <FindBar />
         <Board />
-        <ContentInfos></ContentInfos>
+        <ContentInfos>{/* <Task /> */}</ContentInfos>
       </div>
     </main>
   );
