@@ -71,12 +71,6 @@ function App() {
                   />
                 );
               })}
-          {/* <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task /> */}
         </ContentInfos>
       </div>
     </main>

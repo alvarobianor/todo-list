@@ -35,7 +35,6 @@
 
 .boxButton {
   display: flex;
-  /* min-width: 95.359px; */
   align-items: center;
   justify-content: center;
 }
