@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { PlusCircle } from "phosphor-react";
+import { FiPlusCircle } from "react-icons/fi";
 
 export function FindBar() {
   function handleSubmit() {
@@ -11,7 +11,7 @@ export function FindBar() {
       <div className={styles.boxButton}>
         <button type="submit" className={styles.submitButton}>
           Criar
-          <PlusCircle size={18} weight="bold" />
+          <FiPlusCircle size={18} />
         </button>
       </div>
     </form>

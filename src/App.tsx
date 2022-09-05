@@ -13,7 +13,14 @@ function App() {
       <div className={styles.wrapper}>
         <FindBar />
         <Board />
-        <ContentInfos>{/* <Task /> */}</ContentInfos>
+        <ContentInfos>
+          <Task />
+          <Task />
+          <Task />
+          <Task />
+          <Task />
+          <Task />
+        </ContentInfos>
       </div>
     </main>
   );
