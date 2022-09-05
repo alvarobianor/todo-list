@@ -19,7 +19,13 @@ export function Task() {
         </button>
         <div className={styles.descriptionTask}>
           <p className={random ? styles.textToDo : styles.textDone}>
-            Lorem dolor
+            {random
+              ? `Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Officiis, voluptatibus nesciunt perspiciatis debitis error
+            consequatur quibusdam rerum tenetur, non repellat aliquam vel,
+            perferendis earum numquam accusamus exercitationem corrupti
+            assumenda quaerat.`
+              : "alguma coisa"}
           </p>
         </div>
         <button className={styles.iconDeleteTask}>
