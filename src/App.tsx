@@ -58,17 +58,19 @@ function App() {
         <FindBar onCreateTask={handleCreateTask} />
         <Board />
         <ContentInfos>
-          {tasks?.map((item) => {
-            return (
-              <Task
-                key={item.id}
-                allTasks={tasks}
-                task={item}
-                onToggleStatusTask={handleToggleStatusTask}
-                onDeleteTask={handleDeleteTask}
-              />
-            );
-          })}
+          {tasks.length == 0
+            ? null
+            : tasks.map((item) => {
+                return (
+                  <Task
+                    key={item.id}
+                    allTasks={tasks}
+                    task={item}
+                    onToggleStatusTask={handleToggleStatusTask}
+                    onDeleteTask={handleDeleteTask}
+                  />
+                );
+              })}
           {/* <Task />
           <Task />
           <Task />
