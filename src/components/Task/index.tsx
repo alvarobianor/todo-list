@@ -25,13 +25,13 @@ export function Task({
           onClick={() => onToggleStatusTask(id)}
         >
           {isDone ? (
-            <BiCircle size={24} className={styles.iconCircle} />
-          ) : (
             <FaCheckCircle size={24} className={styles.iconCheckCircle} />
+          ) : (
+            <BiCircle size={24} className={styles.iconCircle} />
           )}
         </button>
         <div className={styles.descriptionTask}>
-          <p className={isDone ? styles.textToDo : styles.textDone}>
+          <p className={isDone ? styles.textDone : styles.textToDo}>
             {description}
           </p>
         </div>
