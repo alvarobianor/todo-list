@@ -5,23 +5,26 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
 export function Task() {
+  const random = Number(Math.random()) * 10 > 5 ? true : false;
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div>
+        <button className={styles.containerIconTask}>
           {/*  TODO remove this */}
-          {(Number(Math.random()) * 10 > 5 ? true : false) ? (
+          {random ? (
             <BiCircle size={24} className={styles.iconCircle} />
           ) : (
             <FaCheckCircle size={24} className={styles.iconCheckCircle} />
           )}
-        </div>
+        </button>
         <div className={styles.descriptionTask}>
-          <p>Lorem dolor</p>
+          <p className={random ? styles.textToDo : styles.textDone}>
+            Lorem dolor
+          </p>
         </div>
-        <div className={styles.iconDeleteTask}>
+        <button className={styles.iconDeleteTask}>
           <FiTrash2 size={24} />
-        </div>
+        </button>
       </div>
     </div>
   );
