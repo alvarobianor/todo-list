@@ -40,7 +40,6 @@ function App() {
 
   function handleCreateTask(description: string) {
     const updatedTasks = [
-      ...tasks,
       {
         id: uuid(),
         description,
