@@ -12,7 +12,7 @@ export function Board({ tasks }: Props) {
         <Counter
           title="Concluídas"
           color="purple"
-          concluded={tasks.filter((item) => item.isDone === true)?.length}
+          concluded={tasks?.filter((item) => item.isDone === true)?.length}
           total={tasks?.length}
         />
       </section>

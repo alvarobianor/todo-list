@@ -32,7 +32,7 @@ function App() {
   }
 
   function handleDeleteTask(id: string) {
-    const updatedTasks = tasks.filter((item) => item.id !== id);
+    const updatedTasks = tasks?.filter((item) => item.id !== id);
 
     localStorage.setItem(KEY, JSON.stringify(updatedTasks));
     setTasks(updatedTasks);
@@ -60,7 +60,7 @@ function App() {
         <ContentInfos>
           {tasks?.length == 0
             ? null
-            : tasks.map((item) => {
+            : tasks?.map((item) => {
                 return (
                   <Task
                     key={item.id}
