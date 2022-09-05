@@ -30,7 +30,10 @@ export function Task({
             <BiCircle size={24} className={styles.iconCircle} />
           )}
         </button>
-        <div className={styles.descriptionTask}>
+        <div
+          className={styles.descriptionTask}
+          onClick={() => onToggleStatusTask(id)}
+        >
           <p className={isDone ? styles.textDone : styles.textToDo}>
             {description}
           </p>
