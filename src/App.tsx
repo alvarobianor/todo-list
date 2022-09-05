@@ -39,13 +39,14 @@ function App() {
   }
 
   function handleCreateTask(description: string) {
-    const updatedTasks = [...tasks];
-
-    updatedTasks.push({
-      id: uuid(),
-      description,
-      isDone: false,
-    });
+    const updatedTasks = [
+      ...tasks,
+      {
+        id: uuid(),
+        description,
+        isDone: false,
+      },
+    ];
 
     localStorage.setItem(KEY, JSON.stringify(updatedTasks));
     setTasks(updatedTasks);
