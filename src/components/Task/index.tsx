@@ -1,6 +1,5 @@
 import styles from "./styles.module.css";
 import { BiCircle } from "react-icons/bi";
-import { math } from "polished";
 import { FaCheckCircle } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 import { TaskType } from "../../App";
