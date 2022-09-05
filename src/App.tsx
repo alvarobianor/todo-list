@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import { Board } from "./components/Board";
-import { FindBar } from "./components/FindBar";
+import { Form } from "./components/Form";
 import { Header } from "./components/Header";
 import { ContentInfos } from "./components/ContentInfos";
 import { Task } from "./components/Task";
@@ -56,7 +56,7 @@ function App() {
     <main className={styles.main}>
       <Header />
       <div className={styles.wrapper}>
-        <FindBar onCreateTask={handleCreateTask} />
+        <Form onCreateTask={handleCreateTask} />
         <Board tasks={tasks} />
         <ContentInfos>
           {tasks.length == 0

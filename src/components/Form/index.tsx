@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 type Props = {
   onCreateTask: (description: string) => void;
 };
-export function FindBar({ onCreateTask }: Props) {
+export function Form({ onCreateTask }: Props) {
   const [description, setDescription] = useState("");
 
   function handleSubmit(event: FormEvent) {
