@@ -50,13 +50,14 @@ function App() {
     localStorage.setItem(KEY, JSON.stringify(updatedTasks));
     setTasks(updatedTasks);
   }
+  console.log("Minash tasks: ", tasks);
 
   return (
     <main className={styles.main}>
       <Header />
       <div className={styles.wrapper}>
         <FindBar onCreateTask={handleCreateTask} />
-        <Board />
+        <Board tasks={tasks} />
         <ContentInfos>
           {tasks.length == 0
             ? null
