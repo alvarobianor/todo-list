@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { ContentInfos } from "./components/ContentInfos";
 import { Task } from "./components/Task";
 import { KEY } from "./Utils/constants";
+import uuid from "react-uuid";
 
 export type TaskType = {
   id: string;
@@ -37,11 +38,24 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  function handleCreateTask(description: string) {
+    const updatedTasks = [...tasks];
+
+    updatedTasks.push({
+      id: uuid(),
+      description,
+      isDone: false,
+    });
+
+    localStorage.setItem(KEY, JSON.stringify(updatedTasks));
+    setTasks(updatedTasks);
+  }
+
   return (
     <main className={styles.main}>
       <Header />
       <div className={styles.wrapper}>
-        <FindBar />
+        <FindBar onCreateTask={handleCreateTask} />
         <Board />
         <ContentInfos>
           {tasks?.map((item) => {
