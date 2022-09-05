@@ -50,7 +50,6 @@ function App() {
     localStorage.setItem(KEY, JSON.stringify(updatedTasks));
     setTasks(updatedTasks);
   }
-  console.log("Minash tasks: ", tasks);
 
   return (
     <main className={styles.main}>
@@ -59,7 +58,7 @@ function App() {
         <Form onCreateTask={handleCreateTask} />
         <Board tasks={tasks} />
         <ContentInfos>
-          {tasks.length == 0
+          {tasks?.length == 0
             ? null
             : tasks.map((item) => {
                 return (
