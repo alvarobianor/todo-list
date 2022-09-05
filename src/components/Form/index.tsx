@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { FiPlusCircle } from "react-icons/fi";
 import styles from "./styles.module.css";
 type Props = {
@@ -18,10 +18,6 @@ export function Form({ onCreateTask }: Props) {
     setDescription(event.target.value);
   }
 
-  function handleNewCommentInvalid(event: ChangeEvent<HTMLInputElement>) {
-    event.target.setCustomValidity("Esse campo é obrigatório!");
-  }
-
   return (
     <form className={styles.wrapper} onSubmit={handleSubmit}>
       <input
@@ -29,7 +25,6 @@ export function Form({ onCreateTask }: Props) {
         className={styles.findBar}
         value={description}
         onChange={handleNewCommentChange}
-        onInvalid={handleNewCommentInvalid}
       />
       <div className={styles.boxButton}>
         <button type="submit" className={styles.submitButton}>
