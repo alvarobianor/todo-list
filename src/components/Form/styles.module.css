@@ -2,12 +2,13 @@
   display: grid;
   grid-template-columns: minmax(19rem, 1fr) 5.95rem;
   gap: 0.5rem;
-  justify-content: space-between;
+  align-items: start;
   width: 100%;
   height: 3.5rem;
 }
 
 .findBar {
+  text-align: start;
   width: 100%;
   border: 1px solid var(--gray-700);
   border-radius: 8px;

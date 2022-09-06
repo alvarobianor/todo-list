@@ -12,10 +12,13 @@ export function Form({ onCreateTask }: Props) {
     onCreateTask(description);
     setDescription("");
   }
-
   function handleNewCommentChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity("");
     setDescription(event.target.value);
+  }
+
+  function handleNewCommentInvalid(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity("Esse campo é obrigatório!");
   }
 
   return (
@@ -24,7 +27,9 @@ export function Form({ onCreateTask }: Props) {
         type="text"
         className={styles.findBar}
         value={description}
+        required
         onChange={handleNewCommentChange}
+        onInvalid={handleNewCommentInvalid}
       />
       <div className={styles.boxButton}>
         <button type="submit" className={styles.submitButton}>
